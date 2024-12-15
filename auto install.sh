@@ -2,35 +2,22 @@ echo "updating and upgrading"
 sudo apt update && upgrade -y
 
 echo "installing faltpak"
-if sudo apt install flatpak
-else echo "insalling flatpak failed"
-exit 1
-fi
+sudo apt install flatpak
 
 echo "installing brave"
-if flatpak run com.brave.Browser
-else echo "brave install failed"
-fi
+flatpak run com.brave.Browser
 
 echo "installing lutris"
-if flatpak run net.lutris.Lutris
-else echo "lutris install failed"
-fi
+flatpak run net.lutris.Lutris
 
 echo "installing heroic"
-if flatpak run com.heroicgameslauncher.hgl
-else echo "heroic install failed"
-fi
+flatpak run com.heroicgameslauncher.hgl
 
 echo "installing steam"
-if flatpak run com.valvesoftware.Steam
-else echo "steam install failed"
-fi
+flatpak run com.valvesoftware.Steam
 
 echo "installing bottels"
-if flatpak run com.usebottles.bottles
-else echo "bottels install failed"
-fi
+flatpak run com.usebottles.bottles
 
 echo "ensuring everything is up to date..."
 sudo apt update && upgrade -y
