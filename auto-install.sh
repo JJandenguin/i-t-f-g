@@ -1,4 +1,3 @@
-echo "updating and upgrading"
 sudo apt update && upgrade -y
 sudo apt list --upgradable
 sudo apt install flatpak
